@@ -17,7 +17,7 @@
         <!-- Header -->
         <header class="app-header">
             <div class="header-left">
-                <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" style="display: none;">☰</button>
                 <button id="new-note-btn" class="btn btn-primary">+ New Note</button>
             </div>
             <div class="header-right">
@@ -65,7 +65,7 @@
                             <div class="color-picker">
                                 <span class="color-label">Color:</span>
                                 <div class="color-options">
-                                    <div class="color-option" data-color="default" style="background: #ffffff; border: 2px solid #e1dfdd;" title="Default"></div>
+                                    <div class="color-option active" data-color="default" style="background: #ffffff; border: 2px solid #e1dfdd;" title="Default"></div>
                                     <div class="color-option" data-color="yellow" style="background: #fff100;" title="Yellow"></div>
                                     <div class="color-option" data-color="blue" style="background: #0078d4;" title="Blue"></div>
                                     <div class="color-option" data-color="green" style="background: #107c10;" title="Green"></div>
@@ -74,13 +74,14 @@
                                     <div class="color-option" data-color="purple" style="background: #5c2d91;" title="Purple"></div>
                                 </div>
                             </div>
-                            <button id="copy-note" class="btn btn-secondary" title="Copy content to clipboard">📋 Copy</button>
+                            <button id="copy-note" class="btn btn-secondary" title="Copy content">📋</button>
                             <button id="add-subnote" class="btn btn-secondary" title="Add sub-note">+ Sub</button>
-                            <button id="version-history-btn" class="btn btn-secondary" title="View version history">🕒 History</button>
+                            <button id="version-history-btn" class="btn btn-secondary" title="Version history">🕒</button>
                             <button id="save-note" class="btn btn-success">Save</button>
                             <button id="delete-note" class="btn btn-danger">Delete</button>
                         </div>
                     </div>
+                    
                     <!-- Quill Editor Container -->
                     <div id="quill-container">
                         <div id="quill-toolbar">
@@ -120,8 +121,6 @@
                             <button class="ql-blockquote"></button>
                             <button class="ql-code-block"></button>
                             
-                            
-                            
                             <!-- Clear formatting -->
                             <button class="ql-clean"></button>
                         </div>
@@ -144,7 +143,7 @@
     <div id="copy-feedback" class="copy-feedback hidden">
         <div class="feedback-content">
             <span class="feedback-icon">✓</span>
-            <span class="feedback-text">Copiato!</span>
+            <span class="feedback-text">Copied!</span>
         </div>
     </div>
 
@@ -200,7 +199,7 @@
                 <div id="search-results" class="search-results"></div>
             </div>
         </div>
-    </div></div>
+    </div>
 
     <!-- Import Backup Modal -->
     <div id="import-modal" class="modal hidden">
@@ -246,4 +245,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
